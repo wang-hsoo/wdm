@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/mainCon.css?after">
+    <title>Document</title>
+</head>
+<body>
+  <div id="header">
+      <div id="menu"><img src="img/menu.png"></div>
+      <div id="uu">
+        <div id="welcome"></div>
+        <input type="button" value="Log out" id="logOut">
+      </div>
+  </div>
+
+  <div id="navi">
+    <div><img src="img/x.png" alt="x" id="x"></div>
+
+    <ul id="navigation">
+        <li id="diary">Diary</li>
+        <li id="memo">Memo</li>
+    </ul>
+  </div>
+
+
+  <div id="main">
+      <div id="listForm">
+          <ul id="diaryList">
+
+          </ul>
+      </div>
+
+
+      <div id="showDiary"></div>
+
+      
+      <div id="writeDiary">
+          <form action="php/diary.php" method="post" id="diaryForm">
+              <input type="text" name = "title" placeholder="제목" id="title" >
+              <textarea name="diary" id="todayDiray" cols="30" rows="10"></textarea>
+              <input type="hidden" name="userId" id="hiddenId">
+              <input type="hidden" name="date" id="date">
+              <input type="submit" value="save" id="save">
+          </form>
+      </div>
+  </div>
+
+
+
+</body>
+<script src="js/writeDiary.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/navigation.js"></script>
+</html>
