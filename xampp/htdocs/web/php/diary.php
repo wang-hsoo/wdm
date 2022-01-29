@@ -17,21 +17,11 @@
 
         $result = mysqli_query($conn, $sql_save);
 
-        ?>
-        <script> 
-            location.replace("../mainCon.html");
-        </script>
-    <?php
+       
 
     }else{
         //그냥 에러
-        ?>
-             
-            <script>
-                location.replace("../mainCon.html");    
-            </script>
-            
-    <?php 
+       
     }
 
 
