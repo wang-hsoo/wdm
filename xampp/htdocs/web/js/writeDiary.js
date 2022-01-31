@@ -59,28 +59,46 @@ function saveId(){
     hiddenId.value = userId;
     nowDate();
     date.value = now;
+    
 }
 
 function listUp(){
     var diaryArray = new Array();
 
     diaryArray = JSON.parse(localStorage.getItem("diary"));
-    
 
-    for(let i = 0; i < diaryArray.length; i++){
+    if(diaryArray.length === undefined){
         const li = document.createElement("li");
         li.id = now;
 
         const span1 = document.createElement("span");
-        span1.innerText = diaryArray[i]["title"];
+        span1.innerText = diaryArray.title;
 
         const span2 = document.createElement("span");
-        span2.innerText = diaryArray[i]["date"];
+        span2.innerText = diaryArray.date;
 
         li.appendChild(span1);
         li.appendChild(span2);
 
         listDiary.appendChild(li);
+
+    }else{
+        for(let i = 0; i <= diaryArray.length; i++){
+            const li = document.createElement("li");
+            li.id = now;
+    
+            const span1 = document.createElement("span");
+            span1.innerText = diaryArray[i]["title"];
+    
+            const span2 = document.createElement("span");
+            span2.innerText = diaryArray[i]["date"];
+    
+            li.appendChild(span1);
+            li.appendChild(span2);
+    
+            listDiary.appendChild(li);
+        }
+
     }
 
 }

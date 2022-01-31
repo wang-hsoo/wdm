@@ -28,11 +28,9 @@
                          }
 
             if(diaryArray === null){
-
                 localStorage.setItem( "diary", JSON.stringify(diary));
-                listUp();
                 location.replace("../mainCon.html");
-
+                
             }else {
                 diaryArray.push(diary);
                 localStorage.setItem( "diary", JSON.stringify(diaryArray));
