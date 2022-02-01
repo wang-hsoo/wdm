@@ -31,7 +31,30 @@
                 localStorage.setItem( "diary", JSON.stringify(diary));
                 location.replace("../mainCon.html");
                 
-            }else {
+            }else if(diaryArray.lenght === undefined){
+                <?php 
+                     
+                     $diary =  "SELECT * FROM diary where id = '$id'";
+                     print_r($diary);
+                     $re = mysqli_query($conn, $diary);
+                     $num = mysqli_num_rows($re);
+
+                     
+
+                     if($num !== 0){
+                        $get = array();
+
+                        while($row = mysqli_fetch_assoc($re)){
+                            array_push($get, $row);
+                        }
+
+                        print_r($get);
+                     }else{
+                         print_r("에러");
+                     }
+                    
+                ?>
+            }else{
                 diaryArray.push(diary);
                 localStorage.setItem( "diary", JSON.stringify(diaryArray));
                 location.replace("../mainCon.html");

@@ -69,7 +69,7 @@ function listUp(){
 
     if(diaryArray.length === undefined){
         const li = document.createElement("li");
-        li.id = now;
+        li.className = "list";
 
         const span1 = document.createElement("span");
         span1.innerText = diaryArray.title;
@@ -85,7 +85,7 @@ function listUp(){
     }else{
         for(let i = 0; i <= diaryArray.length; i++){
             const li = document.createElement("li");
-            li.id = now;
+            li.className = "list";
     
             const span1 = document.createElement("span");
             span1.innerText = diaryArray[i]["title"];
