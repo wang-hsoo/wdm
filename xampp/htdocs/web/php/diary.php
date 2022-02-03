@@ -33,9 +33,9 @@
                 
             }else if(diaryArray.lenght === undefined){
                 <?php 
-                     
+                     $diary = array();
+                     $re = array();
                      $diary =  "SELECT * FROM diary where id = '$id'";
-                     print_r($diary);
                      $re = mysqli_query($conn, $diary);
                      $num = mysqli_num_rows($re);
 
@@ -47,8 +47,29 @@
                         while($row = mysqli_fetch_assoc($re)){
                             array_push($get, $row);
                         }
+                        ?> var diArray = new Array();<?php
 
-                        print_r($get);
+                        
+                        for($i = 0; $i < $num; $i++){
+                            ?>
+                             
+                              var di = {
+                                  title : "<?=$get[$i]["title"]?>",
+                                  content : "<?=$get[$i]["content"]?>",
+                                  date : "<?=$get[$i]["date"]?>"
+                              }
+                              
+                              diArray.push(di);
+                              
+                              
+
+                    <?php
+                        }
+                        ?>
+                        localStorage.setItem( "diary", JSON.stringify(diArray));
+                        location.replace("../mainCon.html");
+                        <?php
+                        
                      }else{
                          print_r("에러");
                      }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/mainCon.css?after">
+    <link rel="stylesheet" href="style/mainCon.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,15 +20,15 @@
     <div><img src="img/x.png" alt="x" id="x"></div>
 
     <ul id="navigation">
-        <li id="diary">Diary</li>
-        <li id="memo">Memo</li>
+        <li id="diary"> <a href="mainCon.html"> Diary </a></li>
+        <li id="memo"> <a href="memo.html"> Memo </a></li>
     </ul>
   </div>
 
 
   <div id="main">
       <div id="listForm">
-          <button>delete</button>
+          <button>작성하기</button>
           <ul id="diaryList">
 
           </ul>
@@ -39,6 +39,8 @@
 
       
       <div id="writeDiary">
+          <div id="back"></div>
+          
           <form action="php/diary.php" method="post" id="diaryForm">
               <input type="text" name = "title" placeholder="제목" id="title" >
               <textarea name="diary" id="todayDiray" cols="30" rows="10"></textarea>
@@ -52,8 +54,9 @@
 
 
 </body>
-<script src="js/showDiary.js"></script>
+
 <script src="js/writeDiary.js"></script>
 <script src="js/logout.js"></script>
 <script src="js/navigation.js"></script>
+<script src="js/showDiary.js"></script>
 </html>
