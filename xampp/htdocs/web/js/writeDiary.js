@@ -7,6 +7,9 @@ const save = document.getElementById("save");
 const date = document.getElementById("date");
 const listDiary = document.getElementById("diaryList");
 const title = document.getElementById("title");
+const seeDiary = document.getElementById("showDiary");
+const writeDiary = document.getElementById("writeDiary");
+const writeBtn = document.getElementById("writeBtn");
 
 var now = "";
 
@@ -59,7 +62,34 @@ function saveId(){
     hiddenId.value = userId;
     nowDate();
     date.value = now;
+}
+
+function showDiary(event){
+
+    const reDiv = seeDiary.querySelector("div");
+    if(reDiv){
+        reDiv.remove();
+    }
+
+    const showDi1 = event.target.children[0].textContent;
+    const showDi2 = event.target.children[1].textContent;
+    const ss = event.target.children;
+
+    $('ss').index()
     
+    
+    seeDiary.style.display = "flex";
+    writeDiary.style.display = "none";
+
+    const div = document.createElement("div");
+    div.innerText = showDi1;
+    seeDiary.appendChild(div);
+
+    writeBtn.addEventListener("click", () => {
+        seeDiary.style.display = "none";
+        writeDiary.style.display = "flex";
+    });
+
 }
 
 function listUp(){
@@ -69,7 +99,7 @@ function listUp(){
 
     if(diaryArray.length === undefined){
         const li = document.createElement("li");
-        li.id = "list";
+        li.className = "list";
         
 
         const span1 = document.createElement("span");
@@ -83,10 +113,12 @@ function listUp(){
 
         listDiary.appendChild(li);
 
+        li.addEventListener("click", showDiary);
+
     }else{
         for(let i = 0; i <= diaryArray.length; i++){
             const li = document.createElement("li");
-            li.id = "list";
+            li.className = "list";
             
     
             const span1 = document.createElement("span");
@@ -99,7 +131,11 @@ function listUp(){
             li.appendChild(span2);
     
             listDiary.appendChild(li);
+
+            li.addEventListener("click", showDiary);
         }
+
+
 
     }
 
