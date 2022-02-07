@@ -78,6 +78,10 @@
     text-decoration: none;
 }
 
+#writeBtn{
+    position: fixed;
+}
+
 /*diary*/
 
 #main{
@@ -140,6 +144,23 @@
     width: 60vw;
     height: 93vh;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/back.jpg);
+    background-color: rgba(0,0,0,0);
+}
+
+#dDiary{
+    width: 50vw;
+    height: 85vh;
+    background-color: white;
+    z-index: 1;
+    opacity: 0.9;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center
 }
 
 #writeDiary{
@@ -152,7 +173,7 @@
     background-color: rgba(0,0,0,0);
 }
 
-#back{
+.back{
     width: 60vw;
     height: 93vh;
     position: absolute;

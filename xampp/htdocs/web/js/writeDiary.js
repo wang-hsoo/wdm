@@ -10,6 +10,7 @@ const title = document.getElementById("title");
 const seeDiary = document.getElementById("showDiary");
 const writeDiary = document.getElementById("writeDiary");
 const writeBtn = document.getElementById("writeBtn");
+const dDiary = document.getElementById("dDiary");
 
 var now = "";
 
@@ -66,16 +67,29 @@ function saveId(){
 
 function showDiary(event){
 
-    const reDiv = seeDiary.querySelector("div");
+    const reDiv = dDiary.querySelector("div");
     if(reDiv){
-        reDiv.remove();
+        while(dDiary.hasChildNodes()){
+            dDiary.removeChild(dDiary.firstChild);
+        }
     }
 
     const showDi1 = event.target.children[0].textContent;
     const showDi2 = event.target.children[1].textContent;
-    const ss = event.target.children;
+    var getDiary = new Array();
 
-    $('ss').index()
+    getDiary = JSON.parse(localStorage.getItem("diary"));
+
+
+
+    for(let i = 0; i < getDiary.length; i++){
+        if(showDi1 === getDiary[i].title && showDi2 === getDiary[i].date){
+            var showCon = getDiary[i].content;
+        }
+    }
+
+
+    
     
     
     seeDiary.style.display = "flex";
@@ -83,7 +97,15 @@ function showDiary(event){
 
     const div = document.createElement("div");
     div.innerText = showDi1;
-    seeDiary.appendChild(div);
+    div.className = "diaryTitle";
+    dDiary.appendChild(div);
+
+    const div2 = document.createElement("div");
+    div2.innerText = showCon;
+    div2.className = "diaryText";
+    dDiary.appendChild(div2);
+
+
 
     writeBtn.addEventListener("click", () => {
         seeDiary.style.display = "none";
