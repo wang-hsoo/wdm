@@ -11,6 +11,8 @@ const seeDiary = document.getElementById("showDiary");
 const writeDiary = document.getElementById("writeDiary");
 const writeBtn = document.getElementById("writeBtn");
 const dDiary = document.getElementById("dDiary");
+const delBtn = document.getElementById("delBtn");
+const userHiddenId = document.getElementById("userHiddenId");
 
 var now = "";
 
@@ -58,6 +60,10 @@ function nowDate(){
 
 }
 
+function saveUserHiddenId(){
+    userHiddenId.value = userId;
+}
+
     
 function saveId(){
     hiddenId.value = userId;
@@ -98,11 +104,13 @@ function showDiary(event){
     const div = document.createElement("div");
     div.innerText = showDi1;
     div.className = "diaryTitle";
+    div.setAttribute('name',"diaryTitle" );
     dDiary.appendChild(div);
 
     const div2 = document.createElement("div");
     div2.innerText = showCon;
     div2.className = "diaryText";
+    div2.setAttribute('name',"diaryText" );
     dDiary.appendChild(div2);
 
 
@@ -178,5 +186,7 @@ function helloWord(){
 
 window.addEventListener("load", helloWord);
 save.addEventListener("click", saveId);
+delBtn.addEventListener("click", saveUserHiddenId);
+
 
 

@@ -163,6 +163,10 @@
     align-items: center
 }
 
+#delBtn{
+    z-index: 1;
+}
+
 #writeDiary{
     width: 60vw;
     height: 93vh;
