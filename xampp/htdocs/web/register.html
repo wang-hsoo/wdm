@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css?ver=135">
     <title>Document</title>
 </head>
 <body>
     <div id="main">
         <form id="login" action="php/register.php" method="post">
-            <input type="text" class = "input" placeholder="아이디" id="id" name="id" autocomplete="off">
-            <input type="password" class = "input" placeholder="비밀번호" id="password" name="password">
-            <input type="password" class = "input" placeholder="비밀번호 확인" id="passwordRe" name="pwR">
-            <input type="text" class = "input" placeholder="이름" id="name" name="name" autocomplete="off">
-            <input type="submit" class = "btn"  value="Sign Up" id="registerBtn" disabled = "true">
+            <div class="register">
+                <input type="text" class = "input" placeholder="아이디" id="id" name="id" autocomplete="off">
+                <input type="password" class = "input" placeholder="비밀번호" id="password" name="password">
+                <input type="password" class = "input" placeholder="비밀번호 확인" id="passwordRe" name="pwR">
+                <input type="text" class = "input" placeholder="이름" id="name" name="name" autocomplete="off">
+            </div>
+                <input type="submit" class = "btn"  value="Sign Up" id="registerBtn" disabled = "true">
             <a href="index.html">Back</a>
 
 

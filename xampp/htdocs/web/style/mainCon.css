@@ -209,3 +209,82 @@
 #save{
     height: 10vh;
 }
+
+@media (max-width: 790px){
+   
+    
+    
+}
+
+@media (max-width: 650px){
+    #main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #listForm{
+        display: inline-block;
+        width: 100vw;
+        height: 23vh;
+    }
+
+    #listForm ul{
+        display: inline-block;
+        width: 90vw;
+        padding: 5vh 0 0 0;
+        
+    }
+    #listForm ul li{
+        width: 35vw;
+        display: inline-block;
+        text-align: center;
+        margin-left: 9vw;
+    }
+    #listForm ul li span{
+        display: block;
+        text-align: center;
+        width: 100%;
+        left: 0;
+    }
+    #listForm ul li span:nth-child(1){
+        margin-left: 0;
+    }
+
+    #listForm::-webkit-scrollbar{
+        width: 0.3em;
+    }
+
+    #writeDiary,#showDiary{
+        width: 100vw;
+        height: 70vh;
+    }
+   .back{
+       width: 100vw;
+       height: 70vh;
+   }
+   #diaryForm{
+       width: 80vw;
+       height: 70vh;
+       margin-top: 8vh;
+   }
+   #dDiary{
+       width: 80vw;
+       height: 60vh;
+   }
+   #title{
+        height: 5vh;
+   }
+   #todayDiray{
+        height: 50vh;
+   }
+   #save{
+        height: 5vh;
+   }
+   #navi{
+       width: 45vw;
+   }
+   #navi div{
+       margin-left: 50%;
+       
+   }
+   
+}
