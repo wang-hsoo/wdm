@@ -96,3 +96,92 @@ a:hover{
 }
 
 
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 760px){
+    #main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    #backrgound{   
+        width: 100%;
+        height: 80vh;
+    }
+    #backrgound div{
+        width: 100%;
+        height: 80vh;
+    }
+    #imgBack img{
+        height: 80vh;
+    }
+ 
+    #login{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    #login .input{
+        width: 20vw;
+        margin-right: 5vw;
+    }
+    #login .btn{
+        width: 15vw;
+        margin-right: 5vw;
+    }
+    #login a{
+        width: 15vw;
+        margin-bottom: 35px;
+    }
+    
+    
+}
+
+@media (max-width: 520px){
+    #main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+    }
+    #login{
+        height: 70vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #login .input{
+        width: 40vw;
+    }
+    #login .btn{
+        width: 40vw; 
+    }
+    #login a{
+        width: 40vw;
+        text-align: center;
+        margin-right: 25px;
+    }
+    #backrgound{   
+        width: 100%;
+        height: 30vh;
+    }
+    #backrgound div{
+        width: 100%;
+        height: 30vh;
+    }
+    #imgBack img{
+        width: 100%;
+        height: 30vh;
+    }
+   
+}
