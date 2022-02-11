@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/mainCon.css?ver=128">
+    <link rel="stylesheet" href="style/mainCon.css?ver=136">
     <title>Document</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
 
       <form id="showDiary" action="php/delete.php" method="post">
           <div id="dDiary"></div>
-          <input type="submit" value="삭제하기" id="delBtn">
+          <input type="submit" value="delete" id="delBtn">
           <input type="hidden" name="hiddenId" id="userHiddenId">
           <div class="back"></div>
       </form>
@@ -47,7 +47,7 @@
           <div class="back"></div>
           
           <form action="php/diary.php" method="post" id="diaryForm">
-              <input type="text" name = "title" placeholder="제목" id="title" >
+              <input type="text" name = "title" placeholder="TITLE" id="title" >
               <textarea name="diary" id="todayDiray" cols="30" rows="10"></textarea>
               <input type="hidden" name="userId" id="hiddenId">
               <input type="hidden" name="date" id="date">
