@@ -314,15 +314,22 @@
    }
    #dDiary{
        width: 80vw;
-       height: 60vh;
+       height: 50vh;
    }
    #title{
+       width: 80vw;
         height: 5vh;
    }
    #todayDiray{
+        width: 80vw;
         height: 50vh;
    }
    #save{
+        width: 50vw;
+        height: 5vh;
+   }
+   #delBtn{
+        width: 50vw;
         height: 5vh;
    }
    #navi{
@@ -331,6 +338,11 @@
    #navi div{
        margin-left: 50%;
        
+   }
+   #writeBtn{
+       width: 6vw;
+       height: 10vh;
+       border-radius: 1.5em;
    }
    
 }

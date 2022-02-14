@@ -13,6 +13,9 @@ const writeBtn = document.getElementById("writeBtn");
 const dDiary = document.getElementById("dDiary");
 const delBtn = document.getElementById("delBtn");
 const userHiddenId = document.getElementById("userHiddenId");
+const hiddenText = document.getElementById("hiddenText");
+const hiddenTitle = document.getElementById("hiddenTitle");
+
 
 var now = "";
 
@@ -61,7 +64,12 @@ function nowDate(){
 }
 
 function saveUserHiddenId(){
+    const showText = document.getElementsByClassName("diaryText");
+    const showTitle = document.getElementsByClassName("diaryTitle");
+    
     userHiddenId.value = userId;
+    hiddenText.value = showText[0].textContent;
+    hiddenTitle.value = showTitle[0].textContent;
 }
 
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/mainCon.css?ver=136">
+    <link rel="stylesheet" href="style/mainCon.css?ver=137">
     <title>Document</title>
 </head>
 <body>
@@ -38,6 +38,8 @@
       <form id="showDiary" action="php/delete.php" method="post">
           <div id="dDiary"></div>
           <input type="submit" value="delete" id="delBtn">
+          <input type="hidden" name="hiddenText" id="hiddenText">
+          <input type="hidden" name="hiddenTitle" id="hiddenTitle">
           <input type="hidden" name="hiddenId" id="userHiddenId">
           <div class="back"></div>
       </form>
@@ -59,7 +61,7 @@
 
 
 </body>
-    <script src="js/writeDiary.js?ver=150"></script>    
+    <script src="js/writeDiary.js?ver=151"></script>    
     <script src="js/logout.js"></script>
     <script src="js/navigation.js"></script>
 </html>
