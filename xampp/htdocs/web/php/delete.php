@@ -52,7 +52,7 @@
 
     }else{
         ?><script>
-
+           localStorage.removeItem("diary");
            location.replace("../mainCon.html");
         </script><?php
     }

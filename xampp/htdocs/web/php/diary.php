@@ -11,17 +11,32 @@
         $id =   mysqli_real_escape_string($conn, $_POST['userId']);
         $date =   mysqli_real_escape_string($conn, $_POST['date']);
 
+
+        $sql_same = "SELECT * FROM diary where title = '$title'";
+        $order = mysqli_query($conn, $sql_same);
+
+        if(mysqli_num_rows($order) > 0){
+            ?>
+            <script> 
+                location.replace("../mainCon.html");
+            </script>
+
+            <?php
+        }else{
+
         $sql_save = "insert into diary (id, title, content, date) 
             values ('$id', '$title', '$diary', '$date')";
 
         $result = mysqli_query($conn, $sql_save);
+
+        
 
         ?>
         <script>
             diaryArray = new Array();
             diaryArray = JSON.parse(localStorage.getItem("diary"));
 
-            var diary = {
+            let diary = {
                             title : "<?=$title?>",
                             content : "<?=$diary?>",
                             date : "<?=$date?>"
@@ -82,6 +97,7 @@
             }
         </script>
        <?php
+    }
 
     }else{
         //그냥 에러

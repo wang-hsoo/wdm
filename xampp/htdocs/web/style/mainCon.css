@@ -39,6 +39,32 @@
     height: 3vh;
 }
 
+#notice{
+    width: 50vw;
+    height: 3vw;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+
+#notice div {
+    display: block;
+    width: 200%;
+    height: 3vw;
+  
+    position: absolute;
+    overflow: hidden;
+
+  }
+
+
+
+  #notice span{
+    float: right;
+    width: 50%;
+  }
+
+
 
 /*content*/
 #navi{

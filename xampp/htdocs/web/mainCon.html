@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/mainCon.css?ver=137">
+    <link rel="stylesheet" href="style/mainCon.css?ver=138">
     <title>Document</title>
 </head>
 <body>
   <div id="header">
       <div id="menu"><img src="img/menu.png"></div>
+      <div id="notice">
+          <div>
+            <span>환영합니다</span>
+            <span>제목을 다르게 설정해주세요</span>
+          </div>
+      </div>
       <div id="uu">
         <div id="welcome"></div>
         <input type="button" value="Log out" id="logOut">
@@ -35,7 +41,7 @@
       </div>
 
 
-      <form id="showDiary" action="php/delete.php" method="post">
+      <form id="showDiary" action="php/delete.php?ver=200" method="post">
           <div id="dDiary"></div>
           <input type="submit" value="delete" id="delBtn">
           <input type="hidden" name="hiddenText" id="hiddenText">
@@ -61,6 +67,7 @@
 
 
 </body>
+    <script src="js/notice.js"></script>
     <script src="js/writeDiary.js?ver=151"></script>    
     <script src="js/logout.js"></script>
     <script src="js/navigation.js"></script>
