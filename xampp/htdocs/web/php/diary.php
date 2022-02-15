@@ -12,6 +12,7 @@
         $date =   mysqli_real_escape_string($conn, $_POST['date']);
 
 
+
         $sql_same = "SELECT * FROM diary where title = '$title'";
         $order = mysqli_query($conn, $sql_same);
 
@@ -33,14 +34,17 @@
 
         ?>
         <script>
+            let conetent = <?=$diary?>.replaceAll( \n\r, "<br>");
+
             diaryArray = new Array();
             diaryArray = JSON.parse(localStorage.getItem("diary"));
 
             let diary = {
                             title : "<?=$title?>",
-                            content : "<?=$diary?>",
+                            content :" <?=$diary?>",
                             date : "<?=$date?>"
                          }
+
 
             if(diaryArray === null){
                 localStorage.setItem( "diary", JSON.stringify(diary));

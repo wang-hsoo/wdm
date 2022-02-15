@@ -10,12 +10,12 @@
 <body>
   <div id="header">
       <div id="menu"><img src="img/menu.png"></div>
-      <div id="notice">
+      <!-- <div id="notice">
           <div>
             <span>환영합니다</span>
             <span>제목을 다르게 설정해주세요</span>
           </div>
-      </div>
+      </div> -->
       <div id="uu">
         <div id="welcome"></div>
         <input type="button" value="Log out" id="logOut">
@@ -54,7 +54,7 @@
       <div id="writeDiary">
           <div class="back"></div>
           
-          <form action="php/diary.php" method="post" id="diaryForm">
+          <form action="php/diary.php?ver=150" method="post" id="diaryForm">
               <input type="text" name = "title" placeholder="TITLE" id="title" >
               <textarea name="diary" id="todayDiray" cols="30" rows="10"></textarea>
               <input type="hidden" name="userId" id="hiddenId">
