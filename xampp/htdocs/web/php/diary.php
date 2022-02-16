@@ -34,16 +34,21 @@
 
         ?>
         <script>
-            let conetent = <?=$diary?>.replaceAll( \n\r, "<br>");
+
 
             diaryArray = new Array();
             diaryArray = JSON.parse(localStorage.getItem("diary"));
 
+            document.write(<?=$diary?>);
+
             let diary = {
                             title : "<?=$title?>",
-                            content :" <?=$diary?>",
+                            content : "<?=$diary?>",
                             date : "<?=$date?>"
                          }
+
+            document.write(diary);
+
 
 
             if(diaryArray === null){

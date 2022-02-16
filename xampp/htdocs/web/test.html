@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="diary" id="todayDiray" cols="30" rows="10" wrap ="hard"></textarea>
+    <input type="submit" value="save" id="save">
+    <script>
+        const button = document.getElementById("save");
+        const todayDiray = document.getElementById("todayDiray");
+
+
+        function clickBtn(){
+            localStorage.setItem( "test", JSON.stringify(todayDiray.value));
+            console.log(todayDiray.value);
+        }
+
+
+
+        button.addEventListener("click", clickBtn);
+    </script>
+</body>
+</html>
