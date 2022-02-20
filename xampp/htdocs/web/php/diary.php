@@ -39,15 +39,22 @@
             diaryArray = new Array();
             diaryArray = JSON.parse(localStorage.getItem("diary"));
 
-            document.write(<?=$diary?>);
+            consloe.log("<?=$diary?>");
+            // var regex = /<br\s*[\/]?>/gi;
+
+            let diaryCon = "<?=$diary?>";
+
+            diaryCon = diaryCon.replace('\r\n', " ");
+
+            console.log(diaryCon);
 
             let diary = {
                             title : "<?=$title?>",
-                            content : "<?=$diary?>",
+                            content : diaryCon,
                             date : "<?=$date?>"
                          }
 
-            document.write(diary);
+            console.log(diary.content);
 
 
 
